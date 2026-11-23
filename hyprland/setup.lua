@@ -1,6 +1,7 @@
 hl.on("hyprland.start", function ()
 	hl.exec_cmd("xrandr --output HDMI-A-1 --primary")
 
+	hl.exec_cmd("systemctl --user start hyprland-session.target")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 
 	hl.exec_cmd("hypridle")
@@ -12,6 +13,10 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd("wl-paste --type image --watch cliphist store")
 
 	hl.exec_cmd("LANG=C easyeffects --service-mode")
+end)
+
+hl.on("hyprland.shutdown", function()
+	os.execute("systemctl --user stop hyprland-session.target hyprpolkitagent && sleep 0.1")
 end)
 
 -- Backend
