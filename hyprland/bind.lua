@@ -2,7 +2,7 @@
 
 hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + SHIFT + M", hl.dsp.exec_cmd("~/.config/hypr/power-menu.sh"))
-hl.bind("SUPER + SHIFT + ALT", hl.dsp.exit())
+hl.bind("SUPER + SHIFT + ALT + M", hl.dsp.exit())
 
 -- [ APPLICATIONS LAUNCH CONTROL AREA ] --
 
