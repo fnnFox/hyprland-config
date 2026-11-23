@@ -19,3 +19,9 @@ hl.device({
 	left_handed = true,
 	active_area_size = {216, 121.5},
 })
+hl.device({
+	name = "xp-pen-star-g640-pen",
+	output = "HDMI-A-1",
+	active_area_size = {160, 90},
+	active_area_position = {0, 5},
+})
